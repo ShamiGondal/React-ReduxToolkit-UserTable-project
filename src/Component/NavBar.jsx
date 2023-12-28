@@ -88,6 +88,51 @@ const Wrapper = styled.section`
       margin: 0.6rem 5rem;
     }
   }
+  @media screen and (max-width: 450px) {
+    nav {
+    margin: 2rem 0;
+    background: #f9f9f9;
+    padding: 1rem 0;
+  }
+  h1{
+    font-size : 40px
+  }
+  nav .menuItems {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  nav .menuItems li {
+    margin: 0.5rem 1rem;
+  }
+  nav .menuItems li a {
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 10px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+  }
+  nav .menuItems li a::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  nav .menuItems li a:hover::before {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  }
 `;
 
 export default NavBar;
